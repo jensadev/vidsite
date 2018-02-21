@@ -80,12 +80,12 @@ function renderTime(f, time) {
 var box = {
 	color: "rgb(60,80,110)",
 	x: 0,
-	y: 110,
-	size: 30,
+	y: 210,
+	size: 80,
 	delta: 1,
-	speed: 8,
-	start: 20,
-	end: 160,
+	speed: 4,
+	start: 10,
+	end: 140,
 	animate: function(f) {
 		if (f >= box.start && f <= box.end) {
 		    ctx.fillStyle = box.color;

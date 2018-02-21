@@ -9,18 +9,25 @@ var elements = document.getElementsByClassName("column");
 var test, anim;
 
 for(var i = 0; i < elements.length; i++) {
-	elements[i].addEventListener("click", function(e) {
+	elements[i].addEventListener("click", function (e) {
 		e.preventDefault();
 		var image = document.createElement("img");
-		//image.src = elements[i].firstElementChild.href;
 		image.src = e.target.src;
 		image.style.width = "100%";
-		test = e;
 		if (!e.path[1].dataset.desc) {
 			modal.firstElementChild.appendChild(image);
 		} else {
-			load (e.path[1].href, modal);
+			//load (e.path[1].href, modal);
 
+			var myFetch = fetch(e.path[1].href);
+
+			myFetch.then( function (response) {
+				response.text().then( function (text) {
+					var content = document.createElement("div");
+					content.innerHTML = text;
+					modal.firstElementChild.appendChild(content);
+				});
+			});
 		}
 
 		modal.firstElementChild.children[1].textContent = e.path[1].dataset.desc;
