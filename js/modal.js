@@ -15,19 +15,14 @@ for(var i = 0; i < elements.length; i++) {
 		//image.src = elements[i].firstElementChild.href;
 		image.src = e.target.src;
 		image.style.width = "100%";
-		if (!e.path[1].dataset.url) {
+		test = e;
+		if (!e.path[1].dataset.desc) {
 			modal.firstElementChild.appendChild(image);
+		} else {
+			load (e.path[1].href, modal);
+
 		}
 
-		//var script = document.createElement("script");
-		//script.type = "text/javascript";
-		var script = document.getElementById("loader");
-		script.src = e.path[1].dataset.url;
-
-		document.getElementsByTagName("body")[0].appendChild(script);
-
-		//var a = load(e.target.parentElement.href);
-		//console.log(e.target.parentElement.href);
 		modal.firstElementChild.children[1].textContent = e.path[1].dataset.desc;
 		modal.style.display = "block";
 	}, true);
@@ -48,14 +43,16 @@ window.onclick = function(event) {
 }
 
 
-function load (url) {
+function load (url, element) {
 	fetch(url).then( function (response) {
 		if(response.ok) {
 			return response;
 	  	}
 	  	throw new Error('Network response was not ok.');
 	}).then( function (data) { 
-	  	console.log(data);
+		console.log(data);
+		test = data;
+		element.innerHTML = data.text();
 	}).catch(function(error) {
 		console.log('There has been a problem with your fetch operation: ', error.message);
 	});
