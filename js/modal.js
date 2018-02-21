@@ -14,12 +14,30 @@ for(var i = 0; i < elements.length; i++) {
 		var image = document.createElement("img");
 		image.src = e.target.src;
 		image.style.width = "100%";
-		if (!e.path[1].dataset.desc) {
+		if (!e.path[1].dataset.url) {
 			modal.firstElementChild.appendChild(image);
 		} else {
 			//load (e.path[1].href, modal);
 
-			var myFetch = fetch(e.path[1].href);
+			  fetch(e.path[1].dataset.url)
+			    .then(function(response) { return response.json(); })
+			    .then(function(json) {
+		    		console.log(json);
+			    	/*
+			      for(var i = 0; i < json.products.length; i++) {
+			        var listItem = document.createElement('li');
+			        listItem.innerHTML = '<strong>' + json.products[i].Name + '</strong>';
+			        listItem.innerHTML +=' can be found in ' + json.products[i].Location + '.';
+			        listItem.innerHTML +=' Cost: <strong>£' + json.products[i].Price + '</strong>';
+			        myList.appendChild(listItem);
+			      }
+
+			      */
+			    });
+
+
+/*
+			var myFetch = fetch(e.path[1].dataset.url);
 
 			myFetch.then( function (response) {
 				response.text().then( function (text) {
@@ -28,6 +46,9 @@ for(var i = 0; i < elements.length; i++) {
 					modal.firstElementChild.appendChild(content);
 				});
 			});
+
+
+*/
 		}
 
 		modal.firstElementChild.children[1].textContent = e.path[1].dataset.desc;
