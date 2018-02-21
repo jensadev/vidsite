@@ -66,7 +66,7 @@ function timeline() {
 }
 
 function clearCanvas() {
-	ctx.fillStyle = "#dddddd";
+	ctx.fillStyle = "#eeeeee";
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
 } 
 

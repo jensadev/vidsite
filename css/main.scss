@@ -3,7 +3,7 @@
 $fontBody: Bitter,serif;
 $fontTitle: "Encode Sans",sans-serif;
 $colorBase: #333333;
-$colorLight: #dddddd;
+$colorLight: #eeeeee;
 $colorDark: #aaaaaa;
 /* colours used
 #f2f2f2
@@ -211,6 +211,66 @@ nav {
     padding: 20px;
     border: 1px solid lighten( $colorLight , 30% );
     width: 80%; /* Could be more or less, depending on screen size */
+    text-align: center;
+
+    p {
+        text-align: left;
+    }
+
+    #modalAnimation {
+        min-width: 100%; 
+        min-height: 100%;
+    }
+
+    .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 25px;
+        background: darken( $colorLight , 10% );
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+
+    .slider:hover {
+        opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        background: darken( $colorDark , 30% );
+        cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        background: darken( $colorDark , 30% );
+        cursor: pointer;
+    }
+
+    .playerButtons {
+        border: none; /* Remove borders */
+        color: white; /* Add a text color */
+        padding: 4px 22px; /* Add some padding */
+        cursor: pointer; /* Add a pointer cursor on mouse-over */
+        background-color: $colorBase; /* Blue */
+        font-family:$fontTitle;
+        font-size: 2em;
+        letter-spacing: .2rem;
+    }
+
+    .playerButtons:nth-child(odd) {
+        margin-left: 20px;
+    }
+
+    .playerButtons:hover {
+        background-color: lighten( $colorBase , 10% ); /* Blue */
+    }
 }
 
 /* The Close Button */
@@ -227,3 +287,4 @@ nav {
     text-decoration: none;
     cursor: pointer;
 }
+
