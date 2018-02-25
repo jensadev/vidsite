@@ -1,6 +1,6 @@
 var canvas = document.getElementById("modalAnimation");
-canvas.width = 640;
-canvas.height = 480;
+canvas.width = 320;
+canvas.height = 240;
 canvas.style.width = canvas.width;
 canvas.style.height = canvas.height;
 
@@ -70,7 +70,7 @@ function clearCanvas() {
 } 
 
 function renderTime(f, time) {
-	ctx.font = "16px Roboto";
+	ctx.font = "16px Encode Sans";
 	ctx.fillStyle = "black";
 	ctx.fillText("Frame: " + f + ", Time elapsed: " + time/1000 + "s", 4, 20);
 }
