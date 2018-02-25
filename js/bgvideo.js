@@ -7,53 +7,13 @@ canvas.style.height = canvas.height;
 var ctx = canvas.getContext("2d");
 var frame = 0;
 var status = null;
-/*
-var slider = document.getElementById("slider");
-slider.max = 180;
 
-var stop = document.getElementById("stop");
-var play = document.getElementById("play");
-var pause = document.getElementById("pause");
-*/
 var start, ms;
 
 clearCanvas();
-//renderTime(frame, 0);
 
-/*
-slider.addEventListener("change", function() {
-	frame = slider.value;
-	clearCanvas();
-	renderTime(frame, 0);
-}, true);
-
-stop.addEventListener("click", function() {
-	clearInterval(status);
-	frame = 0;
-	slider.value = frame;
-	status = null;
-	clearCanvas();
-	renderTime(frame, 0);
-	boll.reset();
-}, true);
-
-play.addEventListener("click", function() {
-	if (status === "null") {
-		start = Date.now();
-		status = setInterval(timeline, 33.333333333333336);
-		play.textContent = "Pause";
-	} else {
-		clearInterval(status);
-		status = null;
-		play.textContent = "Play";
-	}
-}, true);
-*/
 function timeline() {
-
-//	slider.value = frame;
 	ms = Date.now() - start;
-	//console.log("Seconds elapsed = " + ms/1000);
 
 	clearCanvas();
 	boll.animate(frame);

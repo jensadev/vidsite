@@ -7,16 +7,7 @@
 
 $fontBody: Bitter,serif;
 $fontTitle: "Encode Sans",sans-serif;
-$colorBase: #333333;
-$colorLight: #eeeeee;
-$colorDark: #aaaaaa;
-/* colours used
-#f2f2f2
-51,51,51
-0,0,0
-221,221,221
-*/
-/* http://thesassway.com/intermediate/mixins-for-semi-transparent-colors */
+
 @mixin alpha-attribute($attribute, $color, $background) {
   $percent: alpha($color) * 100%;
   $opaque: opacify($color, 1);
