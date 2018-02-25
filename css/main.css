@@ -319,7 +319,7 @@ nav {
   flex: 25%;
   padding: 0 4px; }
   .column img {
-    margin-top: 8px;
+    margin-top: 16px;
     vertical-align: middle; }
 
 /* The Modal (background) */
@@ -340,6 +340,9 @@ nav {
   /* Enable scroll if needed */
   background-color: rgba(4, 18, 21, 0.8); }
 
+.modalBody {
+  text-align: center; }
+
 /* Modal Content/Box */
 .modal-content {
   background-color: #eaeaea;
@@ -349,55 +352,66 @@ nav {
   border: 1px solid white;
   width: 80%;
   /* Could be more or less, depending on screen size */
-  text-align: center; }
+  height: 80%; }
   .modal-content p {
     text-align: left; }
-  .modal-content .animFrame {
-    width: 100%;
-    border: 0px;
-    overflow: hidden; }
-  .modal-content .slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 25px;
-    background: #ababab;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s; }
-  .modal-content .slider:hover {
-    opacity: 1; }
-  .modal-content .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    background: #080a0a;
-    cursor: pointer; }
-  .modal-content .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: #041215;
-    cursor: pointer; }
-  .modal-content .playerButtons {
+  .modal-content iframe {
     border: none;
-    /* Remove borders */
-    color: white;
-    /* Add a text color */
-    padding: 4px 22px;
-    /* Add some padding */
-    cursor: pointer;
-    /* Add a pointer cursor on mouse-over */
-    background-color: #1a1b1c;
-    /* Blue */
-    font-family: "Encode Sans", sans-serif;
-    font-size: 2em;
-    letter-spacing: .2rem; }
-  .modal-content .playerButtons:nth-child(odd) {
-    margin-left: 20px; }
-  .modal-content .playerButtons:hover {
-    background-color: #64686b;
-    /* Blue */ }
+    overflow: hidden;
+    width: 100%;
+    height: 80%; }
+
+#modalAnimation {
+  width: 100%; }
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #ababab;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s; }
+
+.slider:hover {
+  opacity: 1; }
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #080a0a;
+  cursor: pointer; }
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #041215;
+  cursor: pointer; }
+
+.playerButtons {
+  border: none;
+  /* Remove borders */
+  color: white;
+  /* Add a text color */
+  padding: 4px 22px;
+  /* Add some padding */
+  cursor: pointer;
+  /* Add a pointer cursor on mouse-over */
+  background-color: #1a1b1c;
+  /* Blue */
+  font-family: "Encode Sans", sans-serif;
+  font-size: 2em;
+  letter-spacing: .2rem; }
+
+.playerButtons:nth-child(odd) {
+  margin-left: 20px; }
+
+.playerButtons:hover {
+  background-color: #64686b;
+  /* Blue */ }
 
 /* The Close Button */
 .close {
