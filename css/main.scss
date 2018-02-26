@@ -1,7 +1,7 @@
 @import 'palette';
-@import 'fredrika';
-@import 'dorotea';
-@import 'vilhemina';
+@import '../dorotea/css/dorotea';
+@import '../fredrika/css/fredrika';
+@import '../vilhemina/css/vilhemina';
 
 /* sass variables */
 
@@ -164,7 +164,6 @@ nav {
 }
 
 /* image grid */
-
 .row {
     display: -ms-flexbox; /* IE 10 */
     display: flex;
@@ -186,17 +185,16 @@ nav {
 }
 
 
-
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
     background-color: rgba( $color3 , .8 );
 }
 
@@ -204,13 +202,12 @@ nav {
     text-align: center;
 }
 
-/* Modal Content/Box */
-.modal-content {
+.modalContent {
     background-color: $color1;
-    margin: 7% auto; /* 15% from the top and centered */
+    margin: 7% auto;
     padding: 20px;
     border: 1px solid lighten( $color1 , 30% );
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
     height: 80%;
 
     p {
@@ -225,13 +222,9 @@ nav {
     }
 }
 
-#modalAnimation {
-    width: 100%;
-}
-
 .slider {
     -webkit-appearance: none;
-    width: 100%;
+    width: 60%;
     height: 25px;
     background: $color2;
     outline: none;
@@ -249,7 +242,7 @@ nav {
     appearance: none;
     width: 25px;
     height: 25px;
-    background: darken( $color4 , 30% );
+    background: darken( $color4 , 10% );
     cursor: pointer;
 }
 
@@ -261,22 +254,18 @@ nav {
 }
 
 .playerButtons {
-    border: none; /* Remove borders */
-    color: white; /* Add a text color */
-    padding: 4px 22px; /* Add some padding */
-    cursor: pointer; /* Add a pointer cursor on mouse-over */
-    background-color: $color5; /* Blue */
+    border: none;
+    color: $color1;
+    padding: 4px 22px;
+    cursor: pointer;
+    background-color: $color5;
     font-family:$fontTitle;
     font-size: 2em;
     letter-spacing: .2rem;
 }
 
-.playerButtons:nth-child(odd) {
-    margin-left: 20px;
-}
-
 .playerButtons:hover {
-    background-color: lighten( $color5 , 30% ); /* Blue */
+    background-color: lighten( $color5 , 30% );
 }
 
 /* The Close Button */
@@ -293,4 +282,3 @@ nav {
     text-decoration: none;
     cursor: pointer;
 }
-

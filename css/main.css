@@ -324,48 +324,36 @@ nav {
 /* The Modal (background) */
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgba(4, 18, 21, 0.8); }
 
 .modalBody {
   text-align: center; }
 
-/* Modal Content/Box */
-.modal-content {
+.modalContent {
   background-color: #eaeaea;
   margin: 7% auto;
-  /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid white;
   width: 80%;
-  /* Could be more or less, depending on screen size */
   height: 80%; }
-  .modal-content p {
+  .modalContent p {
     text-align: left; }
-  .modal-content iframe {
+  .modalContent iframe {
     border: none;
     overflow: hidden;
     width: 100%;
     height: 80%; }
 
-#modalAnimation {
-  width: 100%; }
-
 .slider {
   -webkit-appearance: none;
-  width: 100%;
+  width: 60%;
   height: 25px;
   background: #ababab;
   outline: none;
@@ -381,7 +369,7 @@ nav {
   appearance: none;
   width: 25px;
   height: 25px;
-  background: #080a0a;
+  background: #344144;
   cursor: pointer; }
 
 .slider::-moz-range-thumb {
@@ -392,25 +380,16 @@ nav {
 
 .playerButtons {
   border: none;
-  /* Remove borders */
-  color: white;
-  /* Add a text color */
+  color: #eaeaea;
   padding: 4px 22px;
-  /* Add some padding */
   cursor: pointer;
-  /* Add a pointer cursor on mouse-over */
   background-color: #1a1b1c;
-  /* Blue */
   font-family: "Encode Sans", sans-serif;
   font-size: 2em;
   letter-spacing: .2rem; }
 
-.playerButtons:nth-child(odd) {
-  margin-left: 20px; }
-
 .playerButtons:hover {
-  background-color: #64686b;
-  /* Blue */ }
+  background-color: #64686b; }
 
 /* The Close Button */
 .close {

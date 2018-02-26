@@ -70,7 +70,7 @@ function clearCanvas() {
 } 
 
 function renderTime(f, time) {
-	ctx.font = "16px Roboto";
+	ctx.font = "16px Encode Sans";
 	ctx.fillStyle = "black";
 	ctx.fillText("Frame: " + f + ", Time elapsed: " + time/1000 + "s", 4, 20);
 }

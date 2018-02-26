@@ -1,6 +1,6 @@
 var canvas = document.getElementById("modalAnimation");
-canvas.width = 320;
-canvas.height = 240;
+canvas.width = 640;
+canvas.height = 480;
 canvas.style.width = canvas.width;
 canvas.style.height = canvas.height;
 
@@ -31,7 +31,7 @@ stop.addEventListener("click", function() {
 	status = null;
 	clearCanvas();
 	renderTime(frame, 0);
-	boll.reset();
+	box.reset();
 	play.textContent = "Play";
 }, true);
 
@@ -54,7 +54,7 @@ function timeline() {
 	//console.log("Seconds elapsed = " + ms/1000);
 
 	clearCanvas();
-	boll.animate(frame);
+	box.animate(frame);
 	renderTime(frame, ms);
 
 	if (frame == 180) {
@@ -77,29 +77,27 @@ function renderTime(f, time) {
 
 
 /* Example rendered object */
-var boll = {
-	color: "rgb(30,140,120)",
+var box = {
+	color: "rgb(60,80,110)",
 	x: 0,
-	y: 110,
-	size: 30,
+	y: 210,
+	size: 80,
 	delta: 1,
-	speed: 8,
-	start: 20,
-	end: 160,
+	speed: 4,
+	start: 10,
+	end: 140,
 	animate: function(f) {
-		if (f >= boll.start && f <= boll.end) {
-			ctx.beginPath();
-		    ctx.arc(boll.x, boll.y, boll.size, 0, 2*Math.PI);
-		    ctx.fillStyle = boll.color;
-		    ctx.fill();
+		if (f >= box.start && f <= box.end) {
+		    ctx.fillStyle = box.color;
+		    ctx.fillRect(box.x, box.y, box.size, box.size);
 
-			boll.x += boll.delta * boll.speed;
+			box.x += box.delta * box.speed;
 
-			if(boll.x > canvas.width || boll.x < 0)
-				boll.delta *= -1;
+			if(box.x > canvas.width || box.x < 0)
+				box.delta *= -1;
 		}
 	},
 	reset: function() {
-		boll.x = 0;
+		box.x = 0;
 	}
 }

@@ -6,7 +6,7 @@
 	<title>Fysiklagar och principer - Galleri</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/main.css">
-	<link href="https://fonts.googleapis.com/css?family=Encode+Sans:400,800|Bitter" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Encode+Sans:400,800%7CBitter" rel="stylesheet">
 </head>
 <body>
 	<nav id="navbar">
@@ -20,27 +20,29 @@
 	</header>	
 	<main class="row"> 
 		<div class="column dorotea">
-			<img src="http://via.placeholder.com/650x450?text=Dorotea" style="width:100%">
+			<img alt="Bildlogo för Doroteagruppen" src="http://via.placeholder.com/650x450?text=Dorotea" style="width:100%">
 		</div>
 		<div class="column fredrika">
-			<img src="http://via.placeholder.com/350x350?text=Fredrika" style="width:100%">
+			<img alt="Bildlogo för Fredrikagruppen" src="http://via.placeholder.com/350x350?text=Fredrika" style="width:100%">
 		</div> 
 		<div class="column vilhemina">
-			<img src="http://via.placeholder.com/450x250?text=Vilhemina" style="width:100%">
-			<a href="exempel/box.html" data-url="exempel/box.json"><img src="images/exempel.png" style="width:100%"></a>
-			<a href="exempel/boll.html" data-url="exempel/boll.json"><img src="images/exempel.png" style="width:100%"></a>
+			<img alt="Bildlogo för Vilheminagruppen" src="http://via.placeholder.com/450x250?text=Vilhemina" style="width:100%">
+		</div>
+		<div class="column exempel">
+			<img alt="Bildlogo för Exmpel" src="http://via.placeholder.com/350x300?text=Exempel" style="width:100%">
+			<a href="exempel/box.html" data-url="exempel/box.json"><img alt="Thumbnail för princip" src="exempel/images/exempel.png" style="width:100%"></a>
+			<a href="exempel/boll.html" data-url="exempel/boll.json"><img alt="Thumbnail för lag" src="exempel/images/exempel.png" style="width:100%"></a>
 		</div>
 		<!-- The Modal -->		
 		<div id="modal" class="modal">
 			<!-- Modal content -->
-			<div id="modal-content" class="modal-content">
+			<div id="modalContent" class="modalContent">
 				<span class="close">&times;</span>
-				<p>Modal text</p>
-				<iframe id="animFrame" scrolling="no"></iframe>
+				<p class="modalTitle">Modal text</p>
+				<iframe id="animFrame"></iframe>
 			</div>
 		</div>
 	</main>
 <script src="js/modal.js" type="text/javascript"></script>
-</script>
 </body>
 </html>
