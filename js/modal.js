@@ -12,8 +12,9 @@ for(var i = 0; i < elements.length; i++) {
 		e.preventDefault();
 
 		// fetch the json file through dataset url, return and load iframe src
-		if(e.path[1].dataset.url) {
-			fetch(e.path[1].dataset.url)
+		var path = e.path || (e.composedPath && e.composedPath());
+		if(path[1].dataset.url) {
+			fetch(path[1].dataset.url)
 			.then(function(response) { return response.json(); })
 			.then(function(json) {
 				console.log(json);
