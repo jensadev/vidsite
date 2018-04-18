@@ -87,19 +87,19 @@ var boll = {
 	start: 20,
 	end: 160,
 	animate: function(f) {
-		if (f >= boll.start && f <= boll.end) {
+		if (f >= this.start && f <= this.end) {
 			ctx.beginPath();
-		    ctx.arc(boll.x, boll.y, boll.size, 0, 2*Math.PI);
-		    ctx.fillStyle = boll.color;
+		    ctx.arc(this.x, this.y, this.size, 0, 2*Math.PI);
+		    ctx.fillStyle = this.color;
 		    ctx.fill();
 
-			boll.x += boll.delta * boll.speed;
+			this.x += this.delta * this.speed;
 
-			if(boll.x > canvas.width || boll.x < 0)
-				boll.delta *= -1;
+			if(this.x > canvas.width || this.x < 0)
+				this.delta *= -1;
 		}
 	},
 	reset: function() {
-		boll.x = 0;
+		this.x = 0;
 	}
 }

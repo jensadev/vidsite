@@ -7,8 +7,9 @@ canvas.style.height = canvas.height;
 var ctx = canvas.getContext("2d");
 var frame = 0;
 var status = null;
+var numberOfFrames = 300;
 var slider = document.getElementById("slider");
-slider.max = 180;
+slider.max = numberOfFrames;
 
 var stop = document.getElementById("stop");
 var play = document.getElementById("play");
@@ -32,6 +33,7 @@ stop.addEventListener("click", function() {
 	clearCanvas();
 	renderTime(frame, 0);
 	box.reset();
+	boll.reset();
 	play.textContent = "Play";
 }, true);
 
@@ -55,9 +57,10 @@ function timeline() {
 
 	clearCanvas();
 	box.animate(frame);
+	boll.animate(frame);
 	renderTime(frame, ms);
 
-	if (frame == 180) {
+	if (frame == numberOfFrames) {
 		clearInterval(status);
 		status = null;
 	}
@@ -99,5 +102,32 @@ var box = {
 	},
 	reset: function() {
 		box.x = 0;
+	}
+}
+
+var boll = {
+	color: "rgb(130,170,120)",
+	x: 40,
+	y: 110,
+	size: 60,
+	delta: 1,
+	speed: 8,
+	start: 60,
+	end: 280,
+	animate: function(f) {
+		if (f >= this.start && f <= this.end) {
+			ctx.beginPath();
+		    ctx.arc(this.x, this.y, this.size, 0, 2*Math.PI);
+		    ctx.fillStyle = boll.color;
+		    ctx.fill();
+
+			this.x += this.delta * this.speed;
+
+			if(this.x > canvas.width || this.x < 0)
+				this.delta *= -1;
+		}
+	},
+	reset: function() {
+		this.x = 0;
 	}
 }
