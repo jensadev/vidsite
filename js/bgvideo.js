@@ -6,7 +6,6 @@ canvas.style.height = canvas.height;
 
 var ctx = canvas.getContext("2d");
 var frame = 0;
-var numberOfFrames = 180;
 var status = null;
 
 var start, ms;
@@ -50,20 +49,20 @@ var boll = {
 	start: 40,
 	end: 200,
 	animate: function(f) {
-		if (f >= this.start) {
+		if (f >= boll.start) {
 			ctx.beginPath();
-		    ctx.arc(this.x, this.y, this.size, 0, 2*Math.PI);
-		    ctx.fillStyle = this.color;
+		    ctx.arc(boll.x, boll.y, boll.size, 0, 2*Math.PI);
+		    ctx.fillStyle = boll.color;
 		    ctx.fill();
 
-			this.x += this.delta * this.speed;
+			boll.x += boll.delta * boll.speed;
 
-			if(this.x > canvas.width || this.x < 0)
-				this.delta *= -1;
+			if(boll.x > canvas.width || boll.x < 0)
+				boll.delta *= -1;
 		}
 	},
 	reset: function() {
-		this.x = 0;
+		boll.x = 0;
 	}
 }
 
@@ -77,20 +76,20 @@ var bolla = {
 	start: 130,
 	end: 200,
 	animate: function(f) {
-		if (f >= this.start) {
+		if (f >= bolla.start) {
 			ctx.beginPath();
-		    ctx.arc(this.x, this.y, this.size, 0, 2*Math.PI);
-		    ctx.fillStyle = this.color;
+		    ctx.arc(bolla.x, bolla.y, bolla.size, 0, 2*Math.PI);
+		    ctx.fillStyle = bolla.color;
 		    ctx.fill();
 
-			this.x += this.delta * this.speed;
+			bolla.x += bolla.delta * bolla.speed;
 
-			if(this.x > canvas.width || this.x < 0)
-				this.delta *= -1;
+			if(bolla.x > canvas.width || bolla.x < 0)
+				bolla.delta *= -1;
 		}
 	},
 	reset: function() {
-		this.x = 0;
+		bolla.x = 0;
 	}
 }
 
@@ -104,20 +103,20 @@ var bolle = {
 	start: 80,
 	end: 200,
 	animate: function(f) {
-		if (f >= this.start) {
+		if (f >= bolle.start) {
 			ctx.beginPath();
-		    ctx.arc(this.x, this.y, this.size, 0, 2*Math.PI);
-		    ctx.fillStyle = this.color;
+		    ctx.arc(bolle.x, bolle.y, bolle.size, 0, 2*Math.PI);
+		    ctx.fillStyle = bolle.color;
 		    ctx.fill();
 
-			this.x += this.delta * this.speed;
+			bolle.x += bolle.delta * bolle.speed;
 
-			if(this.x > canvas.width || this.x < 0)
-				this.delta *= -1;
+			if(bolle.x > canvas.width || bolle.x < 0)
+				bolle.delta *= -1;
 		}
 	},
 	reset: function() {
-		this.x = 0;
+		bolle.x = 0;
 	}
 }
 
@@ -131,20 +130,20 @@ var bollo = {
 	start: 140,
 	end: 200,
 	animate: function(f) {
-		if (f >= this.start) {
+		if (f >= bollo.start) {
 			ctx.beginPath();
-		    ctx.arc(this.x, this.y, this.size, 0, 2*Math.PI);
-		    ctx.fillStyle = this.color;
+		    ctx.arc(bollo.x, bollo.y, bollo.size, 0, 2*Math.PI);
+		    ctx.fillStyle = bollo.color;
 		    ctx.fill();
 
-			this.x += this.delta * this.speed;
+			bollo.x += bollo.delta * bollo.speed;
 
-			if(this.x > canvas.width || this.x < 0)
-				this.delta *= -1;
+			if(bollo.x > canvas.width || bollo.x < 0)
+				bollo.delta *= -1;
 		}
 	},
 	reset: function() {
-		this.x = 0;
+		bollo.x = 0;
 	}
 }
 start = Date.now();

@@ -167,17 +167,21 @@ var boxSmall = {
 		    ctx.fillStyle = this.color;
 		    ctx.fillRect(this.x, this.y, 50,50);
 		    ctx.setTransform(1,0,0,1,0,0);
-			//Makes the small box rotate and moves it up
+			//Makes the small box rotate and moves it up.
+			//Decreases the y and x location to match the balance pole.
+			//Adds to the angle to match the angle of the balance pole.
 		  	if (frame < 30 && this.deg < 25) {
 		    	this.deg++;
 		    	this.y -= 3.1;
 		    	this.x -= 0.19;
-		    //Moves the box back to its original location  
+		    //Moves the box back to its original location 
+		    //Number of frames are between 60 and 100, and the degree is not zero (playback in reverse) 
 		    } else if (frame > 60 && frame < 100 && this.deg != 0){
 		    	this.deg--;
 		    	this.y += 3.1;
 		    	this.x += 0.19;
 		    //Moves the box to right so the balance pole is stable
+		    //Moves the box along the pole by adding to its x value.
 		    } else if (frame > 100 && frame < 130) {
 		    	this.x += 3;
 		    }
@@ -209,7 +213,10 @@ var boxBig = {
 		    ctx.fillRect(this.x, this.y, 70.7106781,70.7106781);
 		    
 		    ctx.setTransform(1,0,0,1,0,0); 
-		     //Moves the bigBox down and rotates it accordingly 
+		     // Moves the bigBox down and rotates it accordingly.
+		     // Increases degree variable to ingress the angle.
+		     // Adds to the y and x axis to move along box to match the balance pole location.
+		     // It does this when frames are less than thirty and the degree (angle) is less than twenty five.
 		     if (frame < 30 && this.deg < 25) {
 		    	this.deg++;
 		    	this.y += 3;
