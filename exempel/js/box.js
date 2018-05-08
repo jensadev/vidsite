@@ -90,18 +90,18 @@ var box = {
 	start: 10,
 	end: 140,
 	animate: function(f) {
-		if (f >= box.start && f <= box.end) {
-		    ctx.fillStyle = box.color;
-		    ctx.fillRect(box.x, box.y, box.size, box.size);
+		if (f >= this.start && f <= this.end) {
+		    ctx.fillStyle = this.color;
+		    ctx.fillRect(this.x, this.y, this.size, this.size);
 
-			box.x += box.delta * box.speed;
+			this.x += this.delta * this.speed;
 
-			if(box.x > canvas.width || box.x < 0)
-				box.delta *= -1;
+			if(this.x > canvas.width || this.x < 0)
+			this.delta *= -1;
 		}
 	},
 	reset: function() {
-		box.x = 0;
+		this.x = 0;
 	}
 }
 
