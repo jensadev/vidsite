@@ -1,6 +1,6 @@
-var canvas = document.getElementById("modalAnimation");
-canvas.width = 640;
-canvas.height = 480;
+var canvas = document.getElementById("animation");
+canvas.width = 320;
+canvas.height = 240;
 canvas.style.width = canvas.width;
 canvas.style.height = canvas.height;
 
@@ -31,7 +31,7 @@ stop.addEventListener("click", function() {
 	status = null;
 	clearCanvas();
 	renderTime(frame, 0);
-	box.reset();
+	boll.reset();
 	play.textContent = "Play";
 }, true);
 
@@ -54,7 +54,7 @@ function timeline() {
 	//console.log("Seconds elapsed = " + ms/1000);
 
 	clearCanvas();
-	box.animate(frame);
+	boll.animate(frame);
 	renderTime(frame, ms);
 
 	if (frame == 180) {
@@ -77,27 +77,29 @@ function renderTime(f, time) {
 
 
 /* Example rendered object */
-var box = {
-	color: "rgb(60,80,110)",
+var boll = {
+	color: "rgb(30,140,120)",
 	x: 0,
-	y: 210,
-	size: 80,
+	y: 110,
+	size: 30,
 	delta: 1,
-	speed: 4,
-	start: 10,
-	end: 140,
+	speed: 6,
+	start: 40,
+	end: 120,
 	animate: function(f) {
-		if (f >= box.start && f <= box.end) {
-		    ctx.fillStyle = box.color;
-		    ctx.fillRect(box.x, box.y, box.size, box.size);
+		if (f >= boll.start && f <= boll.end) {
+			ctx.beginPath();
+		    ctx.arc(boll.x, boll.y, boll.size, 0, 2*Math.PI);
+		    ctx.fillStyle = boll.color;
+		    ctx.fill();
 
-			box.x += box.delta * box.speed;
+			boll.x += boll.delta * boll.speed;
 
-			if(box.x > canvas.width || box.x < 0)
-				box.delta *= -1;
+			if(boll.x > 320 || boll.x < 0)
+				boll.delta *= -1;
 		}
 	},
 	reset: function() {
-		box.x = 0;
+		boll.x = 0;
 	}
 }

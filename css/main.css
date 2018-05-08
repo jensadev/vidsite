@@ -6,14 +6,6 @@
 /* RGB */
 .dorotea {
   background-color: #89023e; }
-  .dorotea img:hover {
-    background-color: #cc7178; }
-
-.fredrika {
-  background-color: #ffdbdc; }
-
-.vilhemina {
-  background-color: red; }
 
 /* sass variables */
 /* http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/ */
