@@ -16,7 +16,7 @@ $dcolor5: rgba(199, 217, 183, 1);
 
 .dorotea {
 	background-color: $dcolor1;
-	a {
-		color: $dcolor2;
+	img:hover {
+		background-color: $dcolor2;
 	}
 }

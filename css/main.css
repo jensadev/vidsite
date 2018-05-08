@@ -6,8 +6,8 @@
 /* RGB */
 .dorotea {
   background-color: #89023e; }
-  .dorotea a {
-    color: #cc7178; }
+  .dorotea img:hover {
+    background-color: #cc7178; }
 
 .fredrika {
   background-color: #ffdbdc; }
