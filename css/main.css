@@ -7,6 +7,15 @@
 .dorotea {
   background-color: #89023e; }
 
+    .dorotea img:hover {
+    background-color: #cc7178; }
+
+.fredrika {
+  background-color: #ffdbdc; }
+
+.vilhemina {
+  background-color: red; }
+
 /* sass variables */
 /* http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/ */
 /* W3.CSS 3.04 Apr 2017 by Jan Egil and Borge Refsnes */
