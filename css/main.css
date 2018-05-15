@@ -6,7 +6,8 @@
 /* RGB */
 .dorotea {
   background-color: #89023e; }
-  .dorotea img:hover {
+
+    .dorotea img:hover {
     background-color: #cc7178; }
 
 .fredrika {
@@ -346,7 +347,7 @@ nav {
 
 .modalContent {
   background-color: #eaeaea;
-  margin: 7% auto;
+  margin: 2.4% auto;
   padding: 20px;
   border: 1px solid white;
   width: 80%;
