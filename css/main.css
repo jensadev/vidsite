@@ -8,10 +8,6 @@
   background-color: #89023e; }
   .dorotea img:hover {
     background-color: #cc7178; }
-  .dorotea a:hover {
-    color: #f3e1dd; }
-    .dorotea a:hover img {
-      background-color: #c7d9b7; }
 
 .fredrika {
   background-color: #ffdbdc; }
@@ -324,15 +320,23 @@ nav {
   padding: 0 4px; }
 
 /* Create two equal columns that sits next to each other */
-.column {
-  -ms-flex: 25%;
-  /* IE 10 */
-  flex: 25%;
-  padding: 0 4px; }
-  .column img {
-    margin-top: 16px;
-    vertical-align: middle; }
+@media (min-width: 420px) {
+  .column {
+    -ms-flex: 25%;
+    /* IE 10 */
+    flex: 25%;
+    padding: 0 4px; }
+    .column img {
+      margin-top: 16px;
+      vertical-align: middle;
+      display: none; } }
+@media (max-width: 420px) {
+  .column {
+    padding: 0 4px; }
 
+  img {
+    margin-top: 16px;
+    vertical-align: middle; } }
 /* The Modal (background) */
 .modal {
   display: none;
