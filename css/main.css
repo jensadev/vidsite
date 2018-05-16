@@ -328,8 +328,7 @@ nav {
     padding: 0 4px; }
     .column img {
       margin-top: 16px;
-      vertical-align: middle;
-      display: none; } }
+      vertical-align: middle; } }
 @media (max-width: 420px) {
   .column {
     padding: 0 4px; }
