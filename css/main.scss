@@ -1,12 +1,13 @@
 @import 'palette';
-@import '../dorotea/css/dorotea';
-@import '../fredrika/css/fredrika';
-@import '../vilhemina/css/vilhemina';
+@import '../dorotea/css/dorotea.scss';
+@import '../fredrika/css/fredrika.scss';
+@import '../vilhemina/css/vilhemina.scss';
 
 /* sass variables */
 
 $fontBody: Bitter,serif;
 $fontTitle: "Encode Sans",sans-serif;
+$mobile-width: 420px;
 
 @mixin alpha-attribute($attribute, $color, $background) {
   $percent: alpha($color) * 100%;
@@ -23,13 +24,13 @@ $fontTitle: "Encode Sans",sans-serif;
     }
     @-moz-keyframes #{$animation-name} {
         @content;
-    }  
+    }
     @-ms-keyframes #{$animation-name} {
         @content;
     }
     @-o-keyframes #{$animation-name} {
         @content;
-    }  
+    }
     @keyframes #{$animation-name} {
         @content;
     }
@@ -40,7 +41,7 @@ $fontTitle: "Encode Sans",sans-serif;
   -moz-animation: #{$str};
   -ms-animation: #{$str};
   -o-animation: #{$str};
-  animation: #{$str};      
+  animation: #{$str};
 }
 
 /* W3.CSS 3.04 Apr 2017 by Jan Egil and Borge Refsnes */
@@ -89,7 +90,7 @@ p{font-size: 2em;}
     position: fixed;
     right: 0;
     bottom: 0;
-    min-width: 100%; 
+    min-width: 100%;
     min-height: 100%;
     z-index: -1;
 }
@@ -173,17 +174,29 @@ nav {
 }
 
 /* Create two equal columns that sits next to each other */
-.column {
-    -ms-flex: 25%; /* IE 10 */
-    flex: 25%;
-    padding: 0 4px;
+@media (min-width: $mobile-width) {
+  .column {
+      -ms-flex: 25%; /* IE 10 */
+      flex: 25%;
+      padding: 0 4px;
 
-    img {
-        margin-top: 16px;
-        vertical-align: middle;
-    }
+      img {
+          margin-top: 16px;
+          vertical-align: middle;
+          display: none;
+      }
+  }
 }
 
+@media (max-width: $mobile-width) {
+  .column {
+    padding: 0 4px;
+  }
+  img {
+      margin-top: 16px;
+      vertical-align: middle;
+  }
+}
 
 /* The Modal (background) */
 .modal {
