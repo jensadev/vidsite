@@ -8,6 +8,10 @@
   background-color: #89023e; }
   .dorotea img:hover {
     background-color: #cc7178; }
+  .dorotea a:hover {
+    color: #f3e1dd; }
+    .dorotea a:hover img {
+      background-color: #c7d9b7; }
 
 .fredrika {
   background-color: #ffdbdc; }
