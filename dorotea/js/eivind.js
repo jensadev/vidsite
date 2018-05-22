@@ -127,9 +127,7 @@ function timeline() {
 
 	// Show one planet on each specific frame value.
 	if (frame == 46 || frame == 120 || frame == 140 || frame == 210) {
-		console.log(i);
 		if (planetCount < planets.length) {
-			console.log(planets[planetCount]);
 			// Set the planet's position to the orbiting planet's current position.
 			planets[planetCount].x = planet.x;
 			planets[planetCount].y = planet.y;

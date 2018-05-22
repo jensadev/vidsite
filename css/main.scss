@@ -120,7 +120,7 @@ p{font-size: 2em;}
 nav {
     overflow: hidden;
     background-color: rgba( $color5 , .85 );
-    position: fixed; /* Set the navbar to fixed position */
+    /* position: fixed;  Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
     @include animation('overlay 1.4s');
@@ -181,7 +181,7 @@ nav {
       flex: 25%;
       padding: 0 4px;
 
-      img { 
+      img {
           margin-top: 16px;
           vertical-align: middle;
       }
