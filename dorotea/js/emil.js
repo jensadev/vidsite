@@ -86,7 +86,7 @@ Ränsar Canvas från objekt
 Används så att alla frames inte ritas ut för då blir det bara ett sträck efter objekten
 **/
 function clearCanvas() {
-	ctx.fillStyle = "rgb(250,250,230)";
+	ctx.fillStyle = "rgb(170,171,214)";
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
 } 
 
