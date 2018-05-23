@@ -5,7 +5,15 @@
 /* HSL */
 /* RGB */
 .dorotea {
-  background-color: #89023e; }
+  background-color: #5d9c55; }
+  .dorotea img:hover {
+    background-color: #deaf48; }
+
+.dorotea-title {
+  color: white;
+  text-align: center;
+  font-weight: lighter;
+  font-style: italic; }
 
 .fredrika {
   background-color: #ffdbdc; }
@@ -267,8 +275,7 @@ p {
 nav {
   overflow: hidden;
   background-color: rgba(26, 27, 28, 0.85);
-  position: fixed;
-  /* Set the navbar to fixed position */
+  /* position: fixed;  Set the navbar to fixed position */
   top: 0;
   /* Position the navbar at the top of the page */
   width: 100%;
