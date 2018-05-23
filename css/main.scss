@@ -174,12 +174,16 @@ nav {
     padding: 0 4px;
 }
 
+.column {
+    padding: 40px 4px 0px 4px;
+}
+
 /* Create two equal columns that sits next to each other */
 @media (min-width: $mobile-width) {
   .column {
       -ms-flex: 25%; /* IE 10 */
       flex: 25%;
-      padding: 0 4px;
+
 
       img {
           margin-top: 16px;
@@ -189,9 +193,6 @@ nav {
 }
 
 @media (max-width: $mobile-width) {
-  .column {
-    padding: 0 4px;
-  }
   img {
       margin-top: 16px;
       vertical-align: middle;
